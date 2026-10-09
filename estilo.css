@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+.bbh-bogle-regular {
+    font-family: "BBH Bogle", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bricolage-grotesque {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+:root {
+    --degradado-rosa: linear-gradient(#FC6574, #FC6040);
+    --degradado-naranja: linear-gradient(#FB6C30, #FA9433);
+
+
+    --color-naranja: #FC5E2E;
+    --color-amarillo: #FCD106;
+    --color-rosa: #FC6788;
+    --color-verde: #9DBC4D;
+    --color-crema: #FDDB73;
+}
+
+html {
+    font-size: calc(100vw / 120);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+    width: 100%;
+    background-color: #FDFFE0;
+    padding: 1.875rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12.5rem;
+}
+
+.nav-link {
+    font-family: "BBH Bogle", sans-serif;
+    font-size: 2.25rem;
+    color: #332C2B;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.bg-degradado-naranja {
+    background: var(--degradado-naranja);
+}
+
+.bg-degradado-rosa {
+    background: var(--degradado-rosa);
+}
+
+.hover-degradado-rosa:hover {
+    background-image: var(--degradado-rosa);
+}
+
+.hover-degradado-naranja:hover {
+    background-image: var(--degradado-naranja);
+}
+
+.nav-link:hover {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-link {
+    display: inline-block;
+    position: relative;
+    width: 9.375rem;
+    height: auto;
+}
+
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo-idle {
+    display: block;
+}
+
+.logo-hover {
+    display: none;
+}
+
+.logo-link:hover .logo-idle {
+    display: none;
+}
+
+.logo-link:hover .logo-hover {
+    display: block;
+}
+
+.lineup-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 24.5% 1.25rem 0;
+    text-align: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.lineup-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 9.375rem;
+
+    background: linear-gradient(to bottom, rgba(252, 94, 46, 0) 0%, var(--color-naranja));
+    z-index: 2;
+    pointer-events: none;
+}
+
+.bg-color-naranja {
+    background-color: var(--color-naranja);
+}
+
+.img-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+
+}
+
+.lineup-logo {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 32.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lineup-logo-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.lineup-row {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 106rem;
+}
+
+.artista {
+    font-family: "BBH Bogle", sans-serif;
+    color: #FDFFE0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1;
+}
+
+.estrella {
+    display: inline-block;
+    flex-shrink: 0;
+
+    mask-image: url("data/Estrella.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+
+    -webkit-mask-image: url("data/Estrella.svg");
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+}
+
+/* 1er Nivel */
+.headliners {
+    margin-top: 0;
+    gap: 1rem;
+}
+
+.headliners .artista {
+    font-size: 6rem;
+}
+
+.headliners .estrella {
+    width: 3.9rem;
+    height: 3.9rem;
+}
+
+/* 2do nivel */
+.secundarios {
+    gap: 0.7rem;
+}
+
+.secundarios .artista {
+    font-size: 3.4rem;
+}
+
+.secundarios .estrella {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* 3er nivel */
+.terciarios {
+    gap: 0.6rem 0.9rem;
+}
+
+.terciarios .artista {
+    font-size: 2.5rem;
+}
+
+.terciarios .estrella {
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+.estrella-amarilla {
+    background-color: var(--color-amarillo);
+}
+
+.estrella-rosa {
+    background-color: var(--color-rosa);
+}
+
+.estrella-verde {
+    background-color: var(--color-verde);
+}
+
+.estrella-crema {
+    background-color: var(--color-crema);
+}
+
+/*-----------------------------------------------------------------------------------------------*/
+
+.section-entradas {
+    width: 100%;
+    min-height: 56.25vw;
+    padding: 5rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-naranja);
+}
+
+.entradas-container {
+    max-width: 65.625rem;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: #FDFFE0;
+}
+
+.intro-texto {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    max-width: 53.125rem;
+    margin: 0 auto 1.25rem auto;
+}
+
+.entradas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.columna-hoja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hoja-img {
+    width: 100%;
+    max-width: 23.75rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.columna-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    text-align: left;
+}
+
+.entradas-titulo {
+    font-family: "BBH Bogle", sans-serif;
+    font-size: 4.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 1;
+}
+
+.entradas-descripcion,
+.entradas-pregunta {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.entradas-pregunta strong {
+    font-weight: 700;
+}
+
+.entradas-cierre {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.texto-ritual {
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.35rem;
+    line-height: 1.45;
+    text-align: left;
+    margin: 0;
+}
+
+.texto-ritual u {
+    text-decoration: underline;
+}
+
+.columna-hoja-derecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
