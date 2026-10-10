@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <script src="cuenta-regresiva.js" defer></script>
     <title>Festival</title>
 </head>
 
@@ -13,28 +14,28 @@
         <nav class="nav-container">
             <a href="#lineup" class="nav-link hover-degradado-rosa">LINE-UP</a>
             <a href="#" class="logo-link" aria-label="Inicio">
-                <img src="data/Logo 1.svg" alt="Logo Caleidoscopia" class="logo-img logo-idle">
-                <img src="data/Logo 2.svg" class="logo-img logo-hover">
+                <img src="data/logo 1.svg" alt="Logo Caleidoscopia" class="logo-img logo-idle">
+                <img src="data/logo 2.svg" alt="" class="logo-img logo-hover">
             </a>
             <a href="#entradas" class="nav-link hover-degradado-naranja">ENTRADAS</a>
         </nav>
     </header>
 
     <section class="lineup-container bg-color-naranja">
-        <img src="data/Fondo.svg" class="img-fondo">
+        <img src="data/fondo.svg" class="img-fondo">
 
         <div class="lineup-logo">
-            <img src="data/Festival Samsara.svg" alt="Festival Samsara" class="lineup-logo-img">
+            <img src="data/festival-samsara.svg" alt="Festival Samsara" class="lineup-logo-img">
         </div>
 
-        <!-- 1ER NIVEL: HEADLINERS -->
+        <!-- HEADLINERS -->
         <div class="lineup-row headliners">
             <span class="artista">LOS TEJEDORES DEL VELO</span>
             <span class="estrella estrella-amarilla"></span>
             <span class="artista">MANDALICA</span>
         </div>
 
-        <!-- 2DO NIVEL: SECUNDARIOS -->
+        <!-- SECUNDARIOS -->
         <div class="lineup-row secundarios">
             <span class="artista">RESONANCIA CONCAVA</span>
             <span class="estrella estrella-rosa"></span>
@@ -59,7 +60,7 @@
             <span class="artista">LINO & COBRE</span>
         </div>
 
-        <!-- 3ER NIVEL: TERCIARIOS -->
+        <!-- TERCIARIOS -->
         <div class="lineup-row terciarios">
             <span class="artista">LA DERIVA DEL PULSO</span>
             <span class="estrella estrella-amarilla"></span>
@@ -86,7 +87,7 @@
             </p>
             <div class="entradas-grid">
                 <div class="columna-hoja">
-                    <img src="data/Hoja frente.svg" alt="Hoja Lámina Samsara" class="hoja-img">
+                    <img src="data/hoja-frente.svg" alt="Hoja Lámina Samsara" class="hoja-img">
                 </div>
                 <div class="columna-info">
                     <span class="entradas-titulo">ENTRADAS</span>
@@ -102,10 +103,41 @@
             </div>
             <div class="entradas-cierre">
                 <p class="texto-ritual">
-                    El ritual se consuma al plasmar el sello de acceso. Que la luz atraviese el calado, active los colores y encienda la vibración. La Hoja Lúmina en mano marca el inicio del ritual: el canal está abierto y la transformación en marcha.
+                    El ritual se consuma al plasmar el sello de acceso. Que la luz atraviese el calado, active los
+                    colores y encienda la vibración. La Hoja Lúmina en mano marca el inicio del ritual: el canal está
+                    abierto y la transformación en marcha.
                 </p>
                 <div class="columna-hoja-derecha">
-                    <img src="data/Hoja reverso.svg" alt="Hoja Lámina Sello" class="hoja-img">
+                    <img src="data/hoja-reverso.svg" alt="Hoja Lámina Sello" class="hoja-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-espiral">
+        <img src="data/fondo-section3.svg" alt="" class="espiral-fondo">
+
+        <div class="espiral-contenido">
+            <div class="cuenta-regresiva" id="cuenta-regresiva" data-fecha="2026-11-14T19:00:00-03:00" role="timer">
+
+                <div class="cr-bloque">
+                    <span class="cr-tarjeta" id="cr-dias">00</span>
+                    <span class="cr-etiqueta">Dias</span>
+                </div>
+
+                <div class="cr-bloque">
+                    <span class="cr-tarjeta" id="cr-horas">00</span>
+                    <span class="cr-etiqueta">Horas</span>
+                </div>
+
+                <div class="cr-bloque">
+                    <span class="cr-tarjeta" id="cr-minutos">00</span>
+                    <span class="cr-etiqueta">Minutos</span>
+                </div>
+
+                <div class="cr-bloque">
+                    <span class="cr-tarjeta" id="cr-segundos">00</span>
+                    <span class="cr-etiqueta">Segundos</span>
                 </div>
             </div>
         </div>
