@@ -13,16 +13,19 @@
     <header class="main-header">
         <nav class="nav-container">
             <a href="#lineup" class="nav-link hover-degradado-rosa">LINE-UP</a>
-            <a href="#" class="logo-link" aria-label="Inicio">
-                <img src="data/logo 1.svg" alt="Logo Caleidoscopia" class="logo-img logo-idle">
-                <img src="data/logo 2.svg" alt="" class="logo-img logo-hover">
+            <a href="https://www.instagram.com/somos.caleidoscopiatdm3/" class="logo-link" target="_blank" rel="noopener" aria-label="Inicio">
+                <img src="data/logo-1.svg" alt="Logo Caleidoscopia" class="logo-img logo-idle">
+                <img src="data/logo-2.svg" alt="" class="logo-img logo-hover">
             </a>
             <a href="#entradas" class="nav-link hover-degradado-naranja">ENTRADAS</a>
         </nav>
     </header>
 
-    <section class="lineup-container bg-color-naranja">
-        <img src="data/fondo.svg" class="img-fondo">
+    <section class="lineup-container bg-color-naranja" id="lineup">
+        <picture>
+            <source media="(max-width: 1100px)" srcset="data/fondo-movil.svg">
+            <img src="data/fondo.svg" class="img-fondo" alt="">
+        </picture>
 
         <div class="lineup-logo">
             <img src="data/festival-samsara.svg" alt="Festival Samsara" class="lineup-logo-img">
@@ -108,7 +111,9 @@
                     abierto y la transformación en marcha.
                 </p>
                 <div class="columna-hoja-derecha">
-                    <img src="data/hoja-reverso.svg" alt="Hoja Lámina Sello" class="hoja-img">
+                    <div class="hoja-hover">
+                        <img src="data/hoja-reverso-hover.svg" alt="" class="hoja-img">
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,6 +123,7 @@
         <img src="data/fondo-section3.svg" alt="" class="espiral-fondo">
 
         <div class="espiral-contenido">
+            <span class="espiral-texto">Samsara llega a la Facultad de Artes en</span>
             <div class="cuenta-regresiva" id="cuenta-regresiva" data-fecha="2026-11-14T19:00:00-03:00" role="timer">
 
                 <div class="cr-bloque">
@@ -142,6 +148,57 @@
             </div>
         </div>
     </section>
+
+    <section class="section-novedades" id="novedades">
+        <img src="data/linea-section4.svg" alt="" class="novedades-separador">
+
+        <figure class="novedades-video">
+            <a class="video-enlace" href="https://www.instagram.com/reel/DeTNdGkNpfh/?exln=NTc4MTIwNjQ2YQ=="
+                target="_blank" rel="noopener"
+                aria-label="Ver el reel de Dresscode en Instagram (se abre en una pestaña nueva)">
+                <img src="data/dresscode-portada.png" alt="">
+                <span class="video-play" aria-hidden="true"></span>
+            </a>
+            <figcaption class="novedades-etiqueta">DRESSCODE</figcaption>
+        </figure>
+
+        <div class="novedades-lista">
+            <span class="novedades-titulo">NOVEDADES</span>
+            <article class="novedad-item">TBA</article>
+            <article class="novedad-item">TBA</article>
+            <article class="novedad-item">TBA</article>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-top">
+                <a href="#" class="footer-logo" aria-label="Volver al inicio">
+                    <img src="data/festival-samsara.svg" alt="Festival Samsara">
+                </a>
+
+                <nav class="footer-nav" aria-label="Navegación del pie de página">
+                    <a href="#lineup">LINE-UP</a>
+                    <a href="#entradas">ENTRADAS</a>
+                    <a href="#novedades">NOVEDADES</a>
+                    <a href="https://www.instagram.com/somos.caleidoscopiatdm3/" target="_blank" rel="noopener"
+                        aria-label="Instagram (se abre en una pestaña nueva)">INSTAGRAM</a>
+                </nav>
+            </div>
+
+            <div class="footer-linea"></div>
+
+            <div class="footer-bottom">
+                <p class="footer-copy">Caleidoscopia, Inc.</p>
+                <a href="https://www.instagram.com/tdet.fda/" target="_blank" rel="noopener">
+                    <img src="data/t.svg" alt="Logo de Taller de Diseño de Experiencias Transmedia" class="footer-t">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
 
 </body>
 
